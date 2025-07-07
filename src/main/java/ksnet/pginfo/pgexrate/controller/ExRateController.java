@@ -29,6 +29,6 @@ public class ExRateController implements ApplicationRunner {
         String jpyBasicExRate = exRateService.getExRateFirst("JPY", "00");
         log.info("usdExRate={},jpyExRate={}, usdBasicExRate={}, jpyBasicExRate={}", usdExRate, jpyExRate, usdBasicExRate, jpyBasicExRate);
 
-        log.info("Successfully retrieved exchange rate data from Hana Bank!!!");
+        log.info("Successfully retrieved exchange rate data from HanaBank!!!");
     }
 }

@@ -23,10 +23,12 @@ public class ExRateController implements ApplicationRunner {
         ExchangeRate jpyRate = exRateService.getExRateFirst("JPY");
         ExchangeRate usdRate10Hour = exRateService.getExRate10Hour("USD");
 
-//        String usdExRate = exRateService.getExRateFirst("USD", "01");
-//        String jpyExrate = exRateService.getExRateFirst("JPY", "01");
-//        String usdBasicExRate = exRateService.getExRateFirst("USD", "00");
-//        String jpyBasicExRate = exRateService.getExRateFirst("JPY", "00");
-//        log.info("usdExRate={},jpyExrate={}, usdBasicExRate={}, jpyBasicExRate={}", usdExRate, jpyExrate, usdBasicExRate, jpyBasicExRate);
+        String usdExRate = exRateService.getExRateFirst("USD", "01");
+        String jpyExRate = exRateService.getExRateFirst("JPY", "01");
+        String usdBasicExRate = exRateService.getExRateFirst("USD", "00");
+        String jpyBasicExRate = exRateService.getExRateFirst("JPY", "00");
+        log.info("usdExRate={},jpyExRate={}, usdBasicExRate={}, jpyBasicExRate={}", usdExRate, jpyExRate, usdBasicExRate, jpyBasicExRate);
+
+        log.info("Successfully retrieved exchange rate data from Hana Bank!!!");
     }
 }

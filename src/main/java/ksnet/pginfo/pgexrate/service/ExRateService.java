@@ -45,7 +45,7 @@ public class ExRateService {
         return result;
     }
 
-    public String getExRateFirstTarget(String moneyCode, String exchangeType) throws Exception {
+    public String getExRateFirst(String moneyCode, String exchangeType) throws Exception {
         ExchangeRate result = getExchangeRate(moneyCode, tradeDate);
         log.info("ExchangeRateTarget={}", result);
 

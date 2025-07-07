@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ExRateRepositoryTest {
 
     @Test
-    void currencyTesrt() {
+    void currencyTest() {
         log.info("{}", CurrencyCode.getNumericCodeByAlpha("USD"));
     }
 

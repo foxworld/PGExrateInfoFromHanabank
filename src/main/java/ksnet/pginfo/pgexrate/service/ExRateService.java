@@ -83,7 +83,7 @@ public class ExRateService {
 
         String base = Objects.requireNonNull(doc.selectFirst("p.txtRateBox span strong")).select("strong").get(0).text();
         String tradeDate = base.replace("년","").replace("월","").replace("일","");
-        log.info("inqStrDt={}, tradeDate={}", inqStrDt, tradeDate);
+        log.info("초회차:요청일자={}, 스크래핑일자={}", inqStrDt, tradeDate);
         if(!tradeDate.equals(inqStrDt)) {
             throw new Exception("해당 통화 정보를 찾을 수 없습니다. 거래일:"+inqStrDt);
         }
@@ -156,7 +156,7 @@ public class ExRateService {
 
         String base = Objects.requireNonNull(doc.selectFirst("p.txtRateBox span strong")).select("strong").get(0).text();
         String tradeDate = base.replace("년","").replace("월","").replace("일","");
-        log.info("change:inqStrDt={}, tradeDate={}", inqStrDt, tradeDate);
+        log.info("변동환율정보:요청일자={}, 스크래핑일자={}", inqStrDt, tradeDate);
         if(!tradeDate.equals(inqStrDt)) {
             throw new Exception("해당 통화 변경정보를 찾을 수 없습니다. 거래일:"+inqStrDt);
         }

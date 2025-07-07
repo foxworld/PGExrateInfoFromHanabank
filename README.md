@@ -6,5 +6,8 @@
 
 ## Usage : 
 ```
-java -jar PGExrateInfoFromHanabank.jar --ksnet.pginfo.trade_date=yyyymmdd
+java -jar PGExrateInfoFromHanabank.jar --ksnet.pginfo.trade_date=yyyymmdd --ksnet.pginfo.rate_flag=FIRST
 ```
+* --ksnet.pginfo.trade_date=거래일
+* --ksnet.pginfo.rate_flag=FIRST(최초고시일)
+* --ksnet.pginfo.rate_flag=CHANGE(10시변동환율)

@@ -19,9 +19,9 @@ public class ExRateController implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         log.info("PG Exchange rate Form HanaBank!!!");
 
-        ExchangeRate usdRate = exRateService.getExRateFirst("USD");
-        ExchangeRate jpyRate = exRateService.getExRateFirst("JPY");
-        ExchangeRate usdRate10Hour = exRateService.getExRate10Hour("USD");
+        exRateService.getExRateFirst("USD");
+        exRateService.getExRateFirst("JPY");
+        exRateService.getExRate10Hour("USD");
 
         String usdExRate = exRateService.getExRateFirst("USD", "01");
         String jpyExRate = exRateService.getExRateFirst("JPY", "01");

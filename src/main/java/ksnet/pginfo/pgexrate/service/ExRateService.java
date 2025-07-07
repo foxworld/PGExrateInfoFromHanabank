@@ -91,8 +91,12 @@ public class ExRateService {
         Element thead = doc.selectFirst("table thead");
         if (thead != null) {
             Elements cols = thead.select("tr th");
-            log.info("cols3={}", cols.get(3).text().replace(" ", ""));
-            log.info("cols4={}", cols.get(4).text().replace(" ", ""));
+            if(!cols.get(3).text().replace(" ", "").equals("외화수표파실때") &&
+                    !cols.get(4).text().replace(" ", "").equals("매매기준율")) {
+                log.error("first:cols3={}", cols.get(3).text().replace(" ", ""));
+                log.error("first:cols4={}", cols.get(4).text().replace(" ", ""));
+                throw new Exception("해당 통화 정보를 찾을 수 없습니다. 거래일:"+inqStrDt);
+            }
         }
 
         Element tbody = doc.selectFirst("table tbody");
@@ -160,8 +164,12 @@ public class ExRateService {
         Element thead = doc.selectFirst("table thead");
         if (thead != null) {
             Elements cols = thead.select("tr th");
-            log.info("cols4={}", cols.get(4).text().replace(" ", ""));
-            log.info("cols5={}", cols.get(5).text().replace(" ", ""));
+            if(!cols.get(4).text().replace(" ", "").equals("외화수표파실때") &&
+                    !cols.get(5).text().replace(" ", "").equals("매매기준율")) {
+                log.error("change:cols4={}", cols.get(4).text().replace(" ", ""));
+                log.error("change:cols5={}", cols.get(5).text().replace(" ", ""));
+                throw new Exception("해당 통화 정보를 찾을 수 없습니다. 거래일:"+inqStrDt);
+            }
         }
 
         Element tbody = doc.selectFirst("table tbody");

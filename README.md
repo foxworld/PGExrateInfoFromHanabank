@@ -6,5 +6,5 @@
 
 ## Usage : 
 ```
-java -jar PGExrateInfoFromHanabank.jar --ksnet.pginfo.work_date=yyyymmdd
+java -jar PGExrateInfoFromHanabank.jar --ksnet.pginfo.trade_date=yyyymmdd
 ```

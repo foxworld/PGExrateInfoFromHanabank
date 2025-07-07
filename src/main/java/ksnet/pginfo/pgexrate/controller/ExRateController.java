@@ -27,7 +27,7 @@ public class ExRateController implements ApplicationRunner {
                 exRateService.getExRateFirst("JPY");
                 break;
             case "CHANGE" :
-                exRateService.getExRate10Hour("USD");
+                exRateService.getExRateChangeHour("USD");
                 break;
 
             case "USD01":

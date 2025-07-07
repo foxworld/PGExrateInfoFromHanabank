@@ -24,6 +24,7 @@ public class ExRateService {
 
     @Value("${ksnet.pginfo.exchange_rate.url}") String url;
     @Value("${ksnet.pginfo.exchange_rate.change.url}") String changeUrl;
+    @Value("${ksnet.pginfo.exchange_rate.change.hour}") Integer changeHour;
     @Value("${ksnet.pginfo.trade_date}") String tradeDate;
 
     public ExchangeRate getExRateFirst(String moneyCode) throws Exception {
@@ -35,10 +36,10 @@ public class ExRateService {
         return result;
     }
 
-    public ExchangeRate getExRate10Hour(String moneyCode) throws Exception {
+    public ExchangeRate getExRateChangeHour(String moneyCode) throws Exception {
         //10시 변동환율
-        ExchangeRate result = getExchangeRateChange(moneyCode, tradeDate, 10);
-        log.info("ExchangeRate10Hour={}", result);
+        ExchangeRate result = getExchangeRateChange(moneyCode, tradeDate, changeHour);
+        log.info("getExRateChangeHour={}", result);
 
         repository.saveChange(result);
 

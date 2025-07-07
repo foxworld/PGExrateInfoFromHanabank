@@ -1,5 +1,8 @@
 package ksnet.pginfo.pgexrate.service;
 
+import lombok.Getter;
+
+@Getter
 public enum CurrencyCode {
     USD("840", "미국 달러"),
     JPY("392", "일본 엔"),
@@ -19,14 +22,6 @@ public enum CurrencyCode {
     CurrencyCode(String numericCode, String description) {
         this.numericCode = numericCode;
         this.description = description;
-    }
-
-    public String getNumericCode() {
-        return numericCode;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public static String getNumericCodeByAlpha(String alphaCode) {

@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 @Slf4j
 @SpringBootTest
 class HolidayScraperTest {
@@ -12,6 +14,7 @@ class HolidayScraperTest {
     @Autowired SingaporeHolidayScraper singaporeHolidayScraper;
     @Autowired HongKongHolidayScraper hongKongHolidayScraper;
     @Autowired UsHolidayScraper usHolidayScraper;
+    @Autowired KoreaHolidayScraper koreaHolidayScraper;
 
 
     @Test
@@ -33,6 +36,15 @@ class HolidayScraperTest {
     void getUsHolidayTest() throws Exception {
         log.info("{}", usHolidayScraper.getFederalHolidays(2025));
     }
+
+    @Test
+    void getKoreaHolidayTest() throws Exception {
+        List<Holiday> holidayList = koreaHolidayScraper.getHolidays(2025);
+         for(Holiday holiday : holidayList) {
+            log.info("{} : {}", holiday.getDate(), holiday.getName());
+        }
+    }
+
 
     @Test
     void convert() {

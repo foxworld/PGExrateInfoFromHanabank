@@ -3,7 +3,7 @@ package ksnet.pginfo.pgexrate.repository;
 import jakarta.transaction.Transactional;
 import ksnet.pginfo.pgexrate.domain.PgExchangeRate;
 import ksnet.pginfo.pgexrate.domain.PgExchangeRateKey;
-import ksnet.pginfo.pgexrate.service.CurrencyCode;
+import ksnet.pginfo.pgexrate.utils.CurrencyCode;
 import ksnet.pginfo.pgexrate.service.ExchangeRate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

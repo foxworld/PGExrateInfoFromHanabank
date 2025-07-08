@@ -1,4 +1,4 @@
-package ksnet.pginfo.pgexrate.service;
+package ksnet.pginfo.pgexrate.utils;
 
 import lombok.Getter;
 

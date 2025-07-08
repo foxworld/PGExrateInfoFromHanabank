@@ -11,6 +11,8 @@ class HolidayScraperTest {
     @Autowired ChinaHolidayScraper chinaHolidayScraper;
     @Autowired SingaporeHolidayScraper singaporeHolidayScraper;
     @Autowired HongKongHolidayScraper hongKongHolidayScraper;
+    @Autowired UsHolidayScraper usHolidayScraper;
+
 
     @Test
     void getChinaHolidayTest() throws Exception {
@@ -25,6 +27,11 @@ class HolidayScraperTest {
     @Test
     void getHongkongHolidayTest() throws Exception {
         log.info("{}", hongKongHolidayScraper.getHolidays(2025));
+    }
+
+    @Test
+    void getUsHolidayTest() throws Exception {
+        log.info("{}", usHolidayScraper.getFederalHolidays(2025));
     }
 
     @Test

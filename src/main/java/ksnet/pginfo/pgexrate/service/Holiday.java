@@ -24,7 +24,7 @@ public class Holiday {
                 "MMMM d yyyy",        // January 1 2025
                 "d MMM yyyy",         // 1 Jan 2025
                 "MMM d yyyy",         // Jan 1 2025
-                "yyyy년M월d일",     // 2025년 1월 1일
+                "yyyy년 M월 d일",     // 2025년 1월 1일
                 "M월 d일 yyyy",       // 1월 1일 2025
                 "d일 M월 yyyy년",     // 1일 1월 2025년
                 "yyyy-M-d",           // 2025-1-1
@@ -40,7 +40,6 @@ public class Holiday {
                 return date.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
             } catch (DateTimeParseException e) {
                 // 다음 포맷 시도
-                return null;
             }
         }
 

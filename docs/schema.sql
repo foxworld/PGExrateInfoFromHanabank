@@ -7,3 +7,9 @@ create table pgexrate (
     chan_time char(6) not null
 );
 create unique index pgexrate_pk on pgexrate(tr_date, money_code, ex_sele);
+
+create table pgusd01 (
+tr_date char(8) not null,
+usd_rate decimal(6,2) not null
+);
+create unique index pgusd01_pk on pgusd01(tr_date);

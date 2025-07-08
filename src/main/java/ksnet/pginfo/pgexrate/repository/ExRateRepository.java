@@ -17,10 +17,13 @@ import org.springframework.stereotype.Repository;
 public class ExRateRepository {
 
     private final JpaExRateRepository jpaExRateRepository;
+    private final PgUsd01Repository pgUsd01Repository;
+
 
     @Value("${ksnet.pginfo.trade_date}") String tradeDate;
 
     public void saveFirst(ExchangeRate exchangeRate) {
+
         PgExchangeRate pgExchangeRate = new PgExchangeRate();
         String currencyCode = CurrencyCode.getNumericCodeByAlpha(exchangeRate.getCurrencyCode());
         log.info("exchangeRate.getCurrencyCode()={}, currencyCode={}", exchangeRate.getCurrencyCode(), currencyCode);
@@ -29,6 +32,10 @@ public class ExRateRepository {
         double sellForeignCheck = Double.parseDouble(exchangeRate.getSellForeignCheck().replace(",", ""));
         pgExchangeRate.insert(tradeDate, currencyCode, "01", sellForeignCheck);
         jpaExRateRepository.save(pgExchangeRate);
+
+        if(exchangeRate.getCurrencyCode().equals("USD")) {
+            pgUsd01Repository.save(tradeDate, sellForeignCheck);
+        }
 
         delete(tradeDate, currencyCode, "00");
         double basicRate = Double.parseDouble(exchangeRate.getBaseRate().replace(",", ""));

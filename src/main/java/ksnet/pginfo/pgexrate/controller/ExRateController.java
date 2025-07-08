@@ -46,6 +46,8 @@ public class ExRateController implements ApplicationRunner {
                 String jpyBasicExRate = exRateService.getExRateFirst("JPY", "00"); // 매매기준율
                 log.info("jpyBasicExRate={}", jpyBasicExRate);
                 break;
+            case "TEST" :
+                break;
         }
 
         log.info("Successfully retrieved exchange rate data from HanaBank!!!");

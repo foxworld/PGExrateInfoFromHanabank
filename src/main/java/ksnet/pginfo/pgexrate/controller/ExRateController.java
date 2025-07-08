@@ -48,6 +48,9 @@ public class ExRateController implements ApplicationRunner {
                 break;
             case "TEST" :
                 break;
+
+            case "MAKECAL" :
+                break;
         }
 
         log.info("Successfully retrieved exchange rate data from HanaBank!!!");

@@ -2,6 +2,7 @@ package ksnet.pginfo.pgexrate.controller;
 
 import ksnet.pginfo.pgexrate.service.ExRateService;
 import ksnet.pginfo.pgexrate.service.ExchangeRate;
+import ksnet.pginfo.pgexrate.service.MakeCalendarService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +17,7 @@ public class ExRateController implements ApplicationRunner {
     @Value("${ksnet.pginfo.rate_flag}") String rateFlag;
 
     private final ExRateService exRateService;
+    private final MakeCalendarService makeCalendarService;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -50,6 +52,8 @@ public class ExRateController implements ApplicationRunner {
                 break;
 
             case "MAKECAL" :
+                makeCalendarService.makeCalendar(2025);
+                makeCalendarService.setHoliday(2025);
                 break;
         }
 

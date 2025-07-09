@@ -30,4 +30,11 @@ class PgCal02RepositoryTest {
         assertThat(pgCal02).isEqualTo(findPgCal02.get());
     }
 
+    @Test
+    void save() {
+        repository.setHoliday("410", "20250101", "Y");
+        Optional<PgCal02> findPgCal02 = repository.findById(new PgCal02Key("410","20250101"));
+        log.info("PgCal02={}", findPgCal02);
+    }
+
 }

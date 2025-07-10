@@ -21,7 +21,6 @@ class MakeCalendarServiceTest {
     @Test
     void makeCalLoopTest() throws Exception {
         service.makeCalendar(2025);
-        service.setHoliday(2025);
     }
 
 }

@@ -53,7 +53,6 @@ public class ExRateController implements ApplicationRunner {
 
             case "MAKECAL" :
                 makeCalendarService.makeCalendar(2025);
-                makeCalendarService.setHoliday(2025);
                 break;
         }
 

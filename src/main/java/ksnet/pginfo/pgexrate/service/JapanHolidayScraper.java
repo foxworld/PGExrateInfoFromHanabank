@@ -12,9 +12,9 @@ import java.util.List;
 
 @Slf4j
 @Service
-public class SingaporeHolidayScraper {
+public class JapanHolidayScraper {
     public List<Holiday> getHolidays(int year) throws Exception {
-        String url = "https://www.timeanddate.com/holidays/singapore/"+year;
+        String url = "https://www.timeanddate.com/holidays/japan/"+year;
         Document doc = Jsoup.connect(url).get();
 
         List<Holiday> holidays = new ArrayList<>();

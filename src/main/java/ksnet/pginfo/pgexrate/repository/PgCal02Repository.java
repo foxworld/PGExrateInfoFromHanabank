@@ -1,9 +1,6 @@
 package ksnet.pginfo.pgexrate.repository;
 
 import jakarta.transaction.Transactional;
-import ksnet.pginfo.pgexrate.domain.PgCal02;
-import ksnet.pginfo.pgexrate.domain.PgCal02Key;
-import ksnet.pginfo.pgexrate.service.Holiday;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;

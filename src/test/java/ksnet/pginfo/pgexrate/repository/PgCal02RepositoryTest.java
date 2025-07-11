@@ -1,8 +1,6 @@
 package ksnet.pginfo.pgexrate.repository;
 
 import jakarta.transaction.Transactional;
-import ksnet.pginfo.pgexrate.domain.PgCal02;
-import ksnet.pginfo.pgexrate.domain.PgCal02Key;
 import ksnet.pginfo.pgexrate.utils.CurrencyCode;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

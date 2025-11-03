@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.3</version>
+		<version>3.5.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ksnet.pginfo</groupId>
@@ -17,15 +17,20 @@
 	<licenses>
 		<license/>
 	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+    <developers>
+        <developer>
+            <id>foxworld</id>
+            <name>PETER HOON LEE</name>
+            <organization>KSNET INC.</organization>
+            <email>foxworld@ksnet.co.kr</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/foxworld/PGExrateInfoFromHanabank.git</connection>
+        <developerConnection>scm:git:https://github.com/foxworld/PGExrateInfoFromHanabank.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/foxworld/PGExrateInfoFromHanabank</url>
+    </scm>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
